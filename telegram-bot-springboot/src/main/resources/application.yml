@@ -1,5 +1,5 @@
 bot:
-  api-key: 514626779:AAEjY7nFaZQnBBLV8zQyoudwxcigEsBGDpE
+  api-key: ${TELEGRAM_API_KEY}
   api-url: https://api.telegram.org/bot
 
   # Your chat id with the bot -> send /chatid command to bot to find it out
