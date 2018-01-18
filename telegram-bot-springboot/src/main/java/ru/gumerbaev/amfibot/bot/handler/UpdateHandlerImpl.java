@@ -43,7 +43,7 @@ public class UpdateHandlerImpl implements UpdateHandler {
 	public void handleUpdate(Update update) {
 		Optional<Message> messageOptional = getMessage(update);
 
-		messageOptional.ifPresent(message -> {
+		messageOptional.ifPresent((Message message) -> {
 
 			saveQuery(message);
 
@@ -54,12 +54,15 @@ public class UpdateHandlerImpl implements UpdateHandler {
 				LOG.debug("Chat id: " + chatId);
 				LOG.debug("Text:    " + text);
 
+/*
 				int indexOf = text.indexOf(" ");
 
 				if (indexOf > -1) {
 					String queryString = text.substring(indexOf);
 					// implement commands with query
-				} else if (text.startsWith("/jenkins")) {
+				} else
+*/
+				if (text.startsWith("/jenkins")) {
 					sendMessages(chatId, jenkinsApi.getStatus());
 				} else if (text.startsWith("/start") || text.startsWith("/help")) {
 					String username = getUserName(message);
