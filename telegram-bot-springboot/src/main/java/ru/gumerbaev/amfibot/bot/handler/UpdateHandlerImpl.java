@@ -74,9 +74,7 @@ public class UpdateHandlerImpl implements UpdateHandler {
 						Maybe<Message> sendMessage = telegramBot.sendMessage(chatId,
 								"This is not a proper command." + System
 										.lineSeparator() + "You can send /help to get help.");
-						sendMessage.subscribe(m -> {
-							LOG.debug(m.getText());
-						});
+						sendMessage.subscribe(m -> LOG.debug(m.getText()));
 					}
 				}
 			}

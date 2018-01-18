@@ -1,29 +1,29 @@
-#sudo: false
+sudo: false
 
-#services:
-#  - docker
+services:
+  - docker
 
 language: java
 jdk: oraclejdk8
 
-#env:
-#  global:
-#    - secure: "Vuv9NRTQp9uvlwGgeJx2uG9LPzIzfG1NLPbKHxJ3L/wEsmgBIN6TY5UaGFv99DeLYPlniHybIqiWt9uOQzhOYvSqUM8zcLEkpleTWlWD0DK+Yp9KGQjoi67rnD0doqToNvziXk/Q3NNejWgEVI9MzslgDF24hZKAK4SS4v4ce/4rSYMYUPQPw9Sf0tLmNxF7+/wFrtedhxYEtWS5tWapw5hsr3Q+EO1VGFUWI48wuh9ZUb3czIQuccI4f7iUKB5AF574oUPS8ACbXUrULCX4b+9ljkRz+Pfq8STxkjVgd179COVfrNOz4lVlyUOr//UgoSGrycp/gAHeXAHc3R9cZrVapU+BwUWHmRKA0ZmHg/Pd3eB6RW+3oMCUzGg0L3mfIrSnfmyLfUtLJGw5IL1INpzY8G271fc4jXRcTCpdmZY2gEjmZrGHOWDN6FqVZrYZSdVYvFpR0SW1nB/Q0IO2qFhcojWlza8cSukrsi6IZEo1LoGlXageHCY5+MRYMUjmX6jhQ5vpWv/eaDBxof7722Ihe0/8Kn6vwt/VTKdnYu+iPDVjqx2e8+llX33zOATGeUdqklRl4hx6jsT1Kiwixanv435zwMsUW54lGp8nuIgAoGKdzTkOb4woWlu3Dkr5jZiF5F4Go0T7kYpyIqlxxBp3oHdrS+6c3dJ2OJSVyoc=" # DOCKER_USER
-#    - secure: "V5Wv04mwDP/RBFTFpmmVW56jSXkDaVNpdXBNB37FETy8hjVN0Cl0sA5nRqXua1X1iGyfctO6pn+GqLDwXB6EUAIuH4D++sOG9Pdli9hADL53oixmiosQpBl49WQQlNT5Y3BUqaUqd2xkZQNpWDV/5MhlhK2ZHX5nUCXiA6L2exaBUfHQj/vI9G35NMx1ttHppR1n+YjKZspElRIHaowmJx4ElvoTcosDu8G+E2MXaEMc/V4ZXmahMfg3NNWNRH1JIb074G1oZCBf+8BN0Qb0wVa/GkxsgaXfAUvqxE+dJ2rFLuQsBI4PTZXUIKVEVy8C69xJ2vg+dWAtng/vAX3V1pFUn13X6KJQymTXGtGwwgQGtCC3v3uigm+GL+So6lOw4kXpFA1VTEs/uWO6mF4Ezk4ULXHjBnceuiUZS10kGOP0fAkFDQVju7UDolB/SUMFmS5HyS1le7fBblY+Pr+PUmIuiZG8ZGtSfRoxauNyJvfsxuDIxbFwRouQgnyUHkc8anVzmoF/Wq82112ruaYN1j9nzEIPbJDyFh+g9wIYrsgserU4NwwChT5AAS0q5fSsGihloMLvSVZr5n2TgcOsdVqMNq/WRX5JpRu0inr7sD7eK3GTZrgBwxHlp9iQ4S7LkVf3phf1A5eLAuy7MIXnMYV5zqAz3vrBacVWrYaBIpE=" # DOCKER_PASS
-##    - COMMIT=${TRAVIS_COMMIT::7}
+env:
+  global:
+    - secure: "Vuv9NRTQp9uvlwGgeJx2uG9LPzIzfG1NLPbKHxJ3L/wEsmgBIN6TY5UaGFv99DeLYPlniHybIqiWt9uOQzhOYvSqUM8zcLEkpleTWlWD0DK+Yp9KGQjoi67rnD0doqToNvziXk/Q3NNejWgEVI9MzslgDF24hZKAK4SS4v4ce/4rSYMYUPQPw9Sf0tLmNxF7+/wFrtedhxYEtWS5tWapw5hsr3Q+EO1VGFUWI48wuh9ZUb3czIQuccI4f7iUKB5AF574oUPS8ACbXUrULCX4b+9ljkRz+Pfq8STxkjVgd179COVfrNOz4lVlyUOr//UgoSGrycp/gAHeXAHc3R9cZrVapU+BwUWHmRKA0ZmHg/Pd3eB6RW+3oMCUzGg0L3mfIrSnfmyLfUtLJGw5IL1INpzY8G271fc4jXRcTCpdmZY2gEjmZrGHOWDN6FqVZrYZSdVYvFpR0SW1nB/Q0IO2qFhcojWlza8cSukrsi6IZEo1LoGlXageHCY5+MRYMUjmX6jhQ5vpWv/eaDBxof7722Ihe0/8Kn6vwt/VTKdnYu+iPDVjqx2e8+llX33zOATGeUdqklRl4hx6jsT1Kiwixanv435zwMsUW54lGp8nuIgAoGKdzTkOb4woWlu3Dkr5jZiF5F4Go0T7kYpyIqlxxBp3oHdrS+6c3dJ2OJSVyoc=" # DOCKER_USER
+    - secure: "V5Wv04mwDP/RBFTFpmmVW56jSXkDaVNpdXBNB37FETy8hjVN0Cl0sA5nRqXua1X1iGyfctO6pn+GqLDwXB6EUAIuH4D++sOG9Pdli9hADL53oixmiosQpBl49WQQlNT5Y3BUqaUqd2xkZQNpWDV/5MhlhK2ZHX5nUCXiA6L2exaBUfHQj/vI9G35NMx1ttHppR1n+YjKZspElRIHaowmJx4ElvoTcosDu8G+E2MXaEMc/V4ZXmahMfg3NNWNRH1JIb074G1oZCBf+8BN0Qb0wVa/GkxsgaXfAUvqxE+dJ2rFLuQsBI4PTZXUIKVEVy8C69xJ2vg+dWAtng/vAX3V1pFUn13X6KJQymTXGtGwwgQGtCC3v3uigm+GL+So6lOw4kXpFA1VTEs/uWO6mF4Ezk4ULXHjBnceuiUZS10kGOP0fAkFDQVju7UDolB/SUMFmS5HyS1le7fBblY+Pr+PUmIuiZG8ZGtSfRoxauNyJvfsxuDIxbFwRouQgnyUHkc8anVzmoF/Wq82112ruaYN1j9nzEIPbJDyFh+g9wIYrsgserU4NwwChT5AAS0q5fSsGihloMLvSVZr5n2TgcOsdVqMNq/WRX5JpRu0inr7sD7eK3GTZrgBwxHlp9iQ4S7LkVf3phf1A5eLAuy7MIXnMYV5zqAz3vrBacVWrYaBIpE=" # DOCKER_PASS
+#    - COMMIT=${TRAVIS_COMMIT::7}
 
-#after_success:
+after_success:
   # Codecov
-##  - bash <(curl -s https://codecov.io/bash)
+#  - bash <(curl -s https://codecov.io/bash)
 
   # Docker Hub
-#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
 
   #TAG
-#  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
 
   # CONFIG SERVICE
-#  - export CONFIG=aydarik/amfibot
-#  - docker build -t $CONFIG:$TAG ./telegram-bot-springboot
-##  - docker tag $CONFIG:$TAG $CONFIG:$COMMIT
-#  - docker push $CONFIG
+  - export CONFIG=aydarik/amfibot
+  - docker build -t $CONFIG:$TAG ./telegram-bot-springboot
+#  - docker tag $CONFIG:$TAG $CONFIG:$COMMIT
+  - docker push $CONFIG

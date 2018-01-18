@@ -25,6 +25,6 @@ logging:
 #server:
 #  ssl:
 #    key-store: /home/spring/ssl/keystore.p12
-#    key-store-password: *** your password ***
+#    key-store-password: ${KEY_STORE_PASSWORD}
 #    keyStoreType: PKCS12
 #    keyAlias: tomcat
