@@ -1,0 +1,30 @@
+bot:
+  api-key: 514626779:AAEjY7nFaZQnBBLV8zQyoudwxcigEsBGDpE
+  api-url: https://api.telegram.org/bot
+
+  # Your chat id with the bot -> send /chatid command to bot to find it out
+  admin-chat-id: 198983210
+  # cron expression second, minute, hour, day of month, month, day(s) of week
+  # every month at the 5th at 12 am
+  admin-birthday: 0 0 0 7 12 ?
+
+spring:
+  # If you want to use long polling add "poll" to the active profiles
+  profiles.active: webhook,admin,poll
+
+server:
+  # Telegram supports the following ports: 443, 80, 88, 8443
+  port: 8888
+
+logging:
+  level:
+    ru.gumerbaev.amfibot: DEBUG
+
+#security:
+#  require-ssl: true
+#server:
+#  ssl:
+#    key-store: /home/spring/ssl/keystore.p12
+#    key-store-password: *** your password ***
+#    keyStoreType: PKCS12
+#    keyAlias: tomcat

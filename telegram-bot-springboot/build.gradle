@@ -1,0 +1,22 @@
+plugins { id "org.springframework.boot" version "1.5.9.RELEASE" }
+
+jar {
+	baseName = 'amfibot'
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-data-rest')
+	compile('org.springframework.boot:spring-boot-starter-hateoas')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
+	runtime('com.h2database:h2')
+	compileOnly('org.projectlombok:lombok')
+	compile('io.reactivex.rxjava2:rxjava:2.1.8')
+	compile('com.squareup.retrofit2:retrofit:2.3.0')
+	compile('com.squareup.retrofit2:adapter-rxjava2:+')
+	compile('com.squareup.retrofit2:converter-jackson:+')
+
+	compile project(':telegram-bot-api')
+	compile project(':telegram-bot-database')
+}
