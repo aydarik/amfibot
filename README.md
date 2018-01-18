@@ -14,10 +14,10 @@ Docker: `docker build -t aydarik/amfibot:latest ./telegram-bot-springboot`
 
 Be sure, that you have exported environment variable: `export TELEGRAM_API_KEY="xxxxx"`
 
-Then run: `docker run -d -p 0.0.0.0:8888:8888 aydarik/amfibot`
+Then run: `docker run -d -p 0.0.0.0:8888:8888 -e "TELEGRAM_API_KEY=$TELEGRAM_API_KEY" aydarik/amfibot`
 
 ### How to use
 
 Open http://localhost:8888 in any browser for landing page.
 
-Write to your bot (can be created by @BotFather bot).
+Write to your bot (can be created by [@BotFather](https://telegram.me/botfather) bot).
