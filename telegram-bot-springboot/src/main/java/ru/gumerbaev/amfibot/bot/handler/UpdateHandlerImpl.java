@@ -113,18 +113,18 @@ public class UpdateHandlerImpl implements UpdateHandler {
 	}
 
 	private void sendMessages(long chatId, Single<JenkinsWrapper> jenkinsJobs) {
+		final List<String> brokenJobs = new ArrayList<>();
 		jenkinsJobs.subscribe(jobs -> jobs.getJobs().forEach(jenkinsJob -> {
-			List<String> brokenJobs = new ArrayList<>();
 			if ("red".equals(jenkinsJob.getColor())) {
 				brokenJobs.add(jenkinsJob.getName());
 			}
-
-			if (!brokenJobs.isEmpty()) {
-				sendMessages(chatId, brokenJobs);
-			} else {
-				sendMessage(chatId, "All jobs are OK!");
-			}
 		}), err -> LOG.error(err.getMessage(), err));
+
+		if (!brokenJobs.isEmpty()) {
+			sendMessages(chatId, brokenJobs);
+		} else {
+			sendMessage(chatId, "All jobs are OK!");
+		}
 	}
 
 	private void sendMessages(long chatId, List<String> messages) {
